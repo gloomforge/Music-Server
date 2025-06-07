@@ -1,0 +1,7 @@
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore virtual environments
+.venv/
