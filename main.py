@@ -1,13 +1,8 @@
 import uvicorn
-from fastapi import FastAPI
 
-app = FastAPI()
+from app import create_app
 
-
-@app.get("/")
-def index() -> dict:
-    return {"message": "Hello, World!"}
-
+app = create_app()
 
 if __name__ == "__main__":
     uvicorn.run("main:app", port=8000, reload=True)
