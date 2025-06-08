@@ -16,13 +16,13 @@ services:
 
   backend:
     build: .
-    command: uvicorn app.main:app --host 0.0.0.0 --port 4200 --reload
+    command: uvicorn main:app --host 0.0.0.0 --port 4200 --reload
     volumes:
       - .:/app
     ports:
       - "4200:4200"
     environment:
-      DATABASE_URL: myqsl+aiomysql://gloomforge/gloomforge@db:3306/music_catalog
+      DATABASE_URL: mysql+aiomysql://gloomforge:gloomforge@db:3306/music_catalog
     depends_on:
       - db
 
