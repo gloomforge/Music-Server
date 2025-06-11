@@ -12,5 +12,6 @@ class AuthCreate(AuthBase):
 class AuthRead(AuthBase):
     user_id: int
 
-    class Config:
-        orm_model = True
+    model_config = {
+        "from_attributes": True,
+    }
